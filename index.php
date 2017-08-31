@@ -3,14 +3,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=1.0">
 		<link rel="stylesheet" type="text/css" href="index-estilo.css">
-		<title>BLOG</title>
 
 		<?php
 
 			$host = "localhost";
 			$user = "root";
 			$password = "";
-			$database = "u525042514_ranks";
+			$database = "";
 
 			$conexao = mysqli_connect($host, $user, $password, $database);
 			mysqli_query($conexao, "SET NAMES 'utf8'");
@@ -18,6 +17,15 @@
 				echo "Erro de conexao...";
 				echo mysqli_connect_error();
 			}
+
+			$consulta = "SELECT id FROM blog";
+			$pesquisa = mysqli_query($conexao, $consulta);
+			$voltas = 0;
+			while($saida = mysqli_fetch_array($pesquisa)){
+				$voltas++;
+			}
+
+			echo "<title>BLOG - $voltas</title>";
 
 		?>
 
@@ -41,13 +49,10 @@
 				$conteudo = $saida['conteudo'];
 				$data = $saida['data'];
 
-
 				echo "<p class='titulo'>$titulo</p>";
 				echo "<p class='temas'>$temas</p>";
 				echo "<p class='conteudo'>$conteudo</p>";
 				echo "<p class='data'>$data</p>";
-
-				//echo "<br>========================<br>";
 
 			}
 
@@ -61,6 +66,4 @@
 
 		<br><br><br>
 	</body>
-
-
 </html>

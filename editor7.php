@@ -9,7 +9,7 @@
 			$host = "localhost";
 			$user = "root";
 			$password = "";
-			$database = "u525042514_ranks";
+			$database = "";
 
 			$conexao = mysqli_connect($host, $user, $password, $database);
 			mysqli_query($conexao, "SET NAMES 'utf8'");
