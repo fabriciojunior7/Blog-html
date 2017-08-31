@@ -18,7 +18,7 @@
 
 	date_default_timezone_set("America/Bahia");
 	$hora = date("H:i");
-	$data = date("d.m.Y");
+	$data = date("l - d.m.Y");
 	$calendario = "$hora<br>$data";
 
 	$titulo = $_POST["titulo"];
