@@ -1,15 +1,16 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=1.0">
 		<link rel="stylesheet" type="text/css" href="index-estilo.css">
-		<title>Meus Pensamentos</title>
+		<title>BLOG</title>
 
 		<?php
 
 			$host = "localhost";
 			$user = "root";
 			$password = "";
-			$database = "";
+			$database = "u525042514_ranks";
 
 			$conexao = mysqli_connect($host, $user, $password, $database);
 			mysqli_query($conexao, "SET NAMES 'utf8'");

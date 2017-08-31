@@ -1,9 +1,13 @@
+<meta name="viewport" content="width=device-width, user-scalable=1.0">
+<title>BLOG ENVIADOR</title>
+<center>
+
 <?php
 
 	$host = "localhost";
 	$user = "root";
 	$password = "";
-	$database = "";
+	$database = "u525042514_ranks";
 
 	$conexao = mysqli_connect($host, $user, $password, $database);
 	mysqli_query($conexao, "SET NAMES 'utf8'");
@@ -35,15 +39,16 @@
 		$pesquisa = mysqli_query($conexao, $consulta);
 		mysqli_close($conexao);
 
-		echo "<h1>Sucesso!</h1>";
+		echo "<h1 style='color:green;'>Sucesso!</h1>";
 		header("refresh:2;url=index.php");
 		exit;
 	}
 
 	else{
-		echo "<h1>Erro!</h1>";
+		echo "<h1 style='color:red;'>Erro!</h1>";
 		header("refresh:2;url=insert7.php");
 		exit;
 	}
 
 ?>
+</center>

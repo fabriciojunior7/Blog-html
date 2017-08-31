@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, user-scalable=1.0">
+		<title>BLOG INSERT</title>
 	</head>
 
 	<body>

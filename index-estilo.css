@@ -8,6 +8,11 @@ body{
 	font-family: "Century Gothic";
 }
 
+@font-face{
+    font-family: Copperplate Gothic;
+    src: url("fonts/COPRGTL.TTF");
+}
+
 #blog{
     background-color: white;
     width: 60%;
